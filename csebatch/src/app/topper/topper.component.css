@@ -1,0 +1,17 @@
+.center {
+  border: 2px solid #a0a1a1;
+  width: 403px;
+  height: 670px;
+  text-align: center;
+  color: blue;
+  font-size: larger;
+}
+p {
+  text-align: center;
+  font-size: 32px;
+  font-style: bold;
+  color: red;
+}
+table {
+  background-color: lightpink;
+}

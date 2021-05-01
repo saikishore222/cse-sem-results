@@ -1,0 +1,74 @@
+<!-- <br>
+<br>
+<img src="https://examcell.rguktn.ac.in/results/header.png" style="margin-left:260px;" >
+<br>
+<br>
+<p>Remedials of semester -2 results of all cse-1 students</p>
+<br>
+<br>
+<br> -->
+<!-- <div id="cse"> 
+  <a href="#" class="btn btn-primary btn-lg " role="button" aria-disabled="true"> CSE-1 </a>
+</div>
+<br>
+<br> -->
+<div fxLayout fxLayoutAlign="left">
+  <mat-form-field appearance="fill" fxFlex="40%">
+    <mat-label>Select an option</mat-label>
+    <mat-select (selectionChange)='onBookChange($event)'>
+      <mat-option>None</mat-option>
+      <mat-option value="c++lab">c++Lab</mat-option>
+      <mat-option value="c++">c++</mat-option>
+      <mat-option value="dm">Dm</mat-option>
+      <mat-option value="ep">Physics</mat-option>
+      <mat-option value="eplab">PhysicsLab</mat-option>
+      <mat-option value="ds">Data Structures</mat-option>
+      <mat-option value="dslab">Data Structures lab</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+<div fxLayout fxLayoutAlign="center">
+  <mat-form-field fxFlex="40%">
+    <input matInput type="text" (keyup)="applyFilter($event)" placeholder="Filter" #input>
+  </mat-form-field>
+</div>
+<br>
+<div class="mat-elevation-z8">
+<table mat-table  [dataSource]="dataSource" matSort class="mat-elevation-z8">
+
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> No. </th>
+    <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="idnum">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Id </th>
+    <td mat-cell *matCellDef="let element"> {{element.idnum}} </td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>Name </th>
+    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="photo">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Photo </th>
+    <td mat-cell *matCellDef="let element"><img src={{element.photo}} style="padding:3px; width: 80px;height: 80px;"> </td>
+  </ng-container>
+  <ng-container matColumnDef="gpa">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> subject </th>
+    <td mat-cell *matCellDef="let element"> {{element.subject}} </td>
+  </ng-container>
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  <tr class="mat-row" *matNoDataRow>
+    <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+  </tr>
+</table>
+<mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+</div>

@@ -1,0 +1,26 @@
+/* table tr td {
+  background-color: white;
+}
+table tr th {
+  background-color: tan;
+} */
+p {
+  text-align: center;
+  font-size: 32px;
+  color: rgb(243, 44, 9);
+  text-decoration: underline;
+}
+table {
+  width: 90%;
+  margin: auto;
+}
+mat-form-field {
+  font-size: 18px;
+  width: 100%;
+  float: right;
+}
+#cse {
+  margin-left: 70px;
+  position: relative;
+  top: 55px;
+}
