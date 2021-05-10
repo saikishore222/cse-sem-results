@@ -48,7 +48,7 @@ export class MyclassComponent implements OnInit {
   }
   getCsestudent()
   {
-      this.httpClient.get<any>('http://localhost:5000/cse1').subscribe(
+      this.httpClient.get<any>('https://saikishore222.github.io/thirdapi/cse1.json').subscribe(
         response =>{
           console.log(response);
           this.dataSource.data = response;         
