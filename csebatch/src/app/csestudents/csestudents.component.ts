@@ -50,7 +50,7 @@ export class CsestudentsComponent implements OnInit , AfterViewInit {
   }
   getCsestudent()
   {
-      this.httpClient.get<any>('http://localhost:5000/cse').subscribe(
+      this.httpClient.get<any>('https://saikishore222.github.io/myapi/cse.json').subscribe(
         response =>{
           console.log(response);
           this.dataSource.data = response;         
