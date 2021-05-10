@@ -48,7 +48,7 @@ export class  Cse1failComponent implements OnInit , AfterViewInit {
   }
   getCsestudent()
   {
-      this.httpClient.get<any>('http://localhost:5000/cseremedial').subscribe(
+      this.httpClient.get<any>('https://saikishore222.github.io/thirdapi/fail.json').subscribe(
         response =>{
           this.dataSource.data = response;
           this.original_Data=response;
